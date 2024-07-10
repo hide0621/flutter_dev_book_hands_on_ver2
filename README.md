@@ -2,6 +2,10 @@
 
 hiragana converter
 
+書籍「Flutter実践開発」の第8章の内容に基づくものです
+
+[Flutter実践開発 - iPhone／Android両対応アプリ開発のテクニック - ](https://gihyo.jp/book/2024/978-4-297-13993-3)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
