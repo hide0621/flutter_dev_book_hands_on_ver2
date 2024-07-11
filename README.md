@@ -6,6 +6,20 @@ hiragana converter
 
 [Flutter実践開発 - iPhone／Android両対応アプリ開発のテクニック - ](https://gihyo.jp/book/2024/978-4-297-13993-3)
 
+## 開発で使用したパッケージ
+
+`flutter pub add http`
+
+`flutte pub add json_annotation`
+
+`flutter pub add --dev json_serializable`
+
+`flutter pub add flutter_riverpod riverpod_annotation`
+
+`flutter pub add --dev riverpod_generator custom_lint riverpod_lint`
+
+`flutter pub add --dev build_runner`
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
