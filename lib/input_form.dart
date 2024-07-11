@@ -13,6 +13,8 @@ class _InputFormState extends State<InputForm> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        /// Paddingウィジェット
+        /// TextFieldウィジェットが横一杯に広がらないように余白を設ける
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
@@ -21,6 +23,9 @@ class _InputFormState extends State<InputForm> {
                 hintText: '文章を入力してください',
               )),
         ),
+
+        /// SizedBoxウィジェット
+        /// TextFieldウィジェットとElevatedButtonウィジェットの間に余白を設ける
         const SizedBox(height: 20),
         ElevatedButton(
           onPressed: () {},
