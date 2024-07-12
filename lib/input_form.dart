@@ -18,9 +18,12 @@ class _InputFormState extends State<InputForm> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           /// Paddingウィジェット
-          /// TextFieldウィジェットが横一杯に広がらないように余白を設ける
+          /// TextFormFieldウィジェットが横一杯に広がらないように余白を設ける
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
+
+            /// TextFormFieldウィジェット
+            /// validatorコールバックで文字の空チェックを行う
             child: TextFormField(
               maxLines: 5,
               decoration: const InputDecoration(
@@ -36,11 +39,14 @@ class _InputFormState extends State<InputForm> {
           ),
 
           /// SizedBoxウィジェット
-          /// TextFieldウィジェットとElevatedButtonウィジェットの間に余白を設ける
+          /// TextFormFieldウィジェットとElevatedButtonウィジェットの間に余白を設ける
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
+              /// Formウィジェット(StatefulWidget)のStateを取得
               final formState = _formKey.currentState!;
+
+              /// validateメソッドが呼ばれると、validatorコールバックが呼ばれる
               formState.validate();
             },
             child: const Text('変換'),
