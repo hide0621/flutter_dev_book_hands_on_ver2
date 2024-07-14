@@ -10,6 +10,8 @@ class InputForm extends StatefulWidget {
 class _InputFormState extends State<InputForm> {
   final _formKey = GlobalKey<FormState>();
 
+  final _textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -25,6 +27,7 @@ class _InputFormState extends State<InputForm> {
             /// TextFormFieldウィジェット
             /// validatorコールバックで文字の空チェックを行う
             child: TextFormField(
+              controller: _textEditingController,
               maxLines: 5,
               decoration: const InputDecoration(
                 hintText: '文章を入力してください',
@@ -47,12 +50,21 @@ class _InputFormState extends State<InputForm> {
               final formState = _formKey.currentState!;
 
               /// validateメソッドが呼ばれると、validatorコールバックが呼ばれる
-              formState.validate();
+              if (!formState.validate()) {
+                return;
+              }
+              debugPrint('text = ${_textEditingController.text}');
             },
             child: const Text('変換'),
           )
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _textEditingController.dispose();
+    super.dispose();
   }
 }
