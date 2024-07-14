@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// [dispose]メソッドをオーバーライドして[TextEditingController]クラスを破棄するためにStatefulWidgetを継承
 class InputForm extends StatefulWidget {
   const InputForm({super.key});
 
@@ -10,6 +11,9 @@ class InputForm extends StatefulWidget {
 class _InputFormState extends State<InputForm> {
   final _formKey = GlobalKey<FormState>();
 
+  /// TextEditingController
+  /// TextFormFieldウィジェットの入力値を取得するためのコントローラ
+  /// このコントローラを使ってWeb APIにjsonデータを渡す
   final _textEditingController = TextEditingController();
 
   @override
@@ -62,6 +66,9 @@ class _InputFormState extends State<InputForm> {
     );
   }
 
+  /// [TextEditingController]クラスが不要になったら[dispose]メソッドで破棄する
+  /// こうしないとメモリリークの可能性が発生して、あるべきデータを保持・送信できなくなる
+  /// [dispose]メソッドは[StatefulWidget]のライフサイクルメソッドの一つで、このウィジェットが破棄されると呼ばれる
   @override
   void dispose() {
     _textEditingController.dispose();
