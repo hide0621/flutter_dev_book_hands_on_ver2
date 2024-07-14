@@ -16,3 +16,15 @@ class Request {
 
   Map<String, Object?> toJson() => _$RequestToJson(this);
 }
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class Response {
+  const Response({
+    required this.converted,
+  });
+
+  final String converted;
+
+  factory Response.fromJson(Map<String, Object?> json) =>
+      _$ResponseFromJson(json);
+}
