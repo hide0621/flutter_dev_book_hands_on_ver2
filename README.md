@@ -20,6 +20,22 @@ hiragana converter
 
 `flutter pub add --dev build_runner`
 
+## .gitignoreに記載したのにも関わらず、反映されない問題とその解決策
+
+以下のコマンドを実行して、キャッシュを削除する（gitignoreが存在するディレクトリにて）
+
+`git rm -r --cached .`
+
+`git add .`
+
+`git commit -m ".gitignoreを反映させる"`
+
+`git push origin リモートブランチ名`
+
+参照：
+
+[.gitignoreに記載したのにも関わらず、反映されない問題とその解決策](https://atsu-developer.net/291/)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
