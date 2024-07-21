@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 import 'data.dart';
 
-/// [dispose]メソッドをオーバーライドして[TextEditingController]クラスを破棄するためにStatefulWidgetを継承
+/// [dispose]メソッドをオーバーライドして[TextEditingController]クラスを破棄するために[StatefulWidget]を継承
 class InputForm extends StatefulWidget {
   const InputForm({super.key});
 
