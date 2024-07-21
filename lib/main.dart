@@ -7,6 +7,8 @@ import 'convert_result.dart';
 import 'input_form.dart';
 import 'loading_indicator.dart';
 
+/// Riverpodを利用するために
+/// アプリのルートウィジェットをProviderScopeでラップする
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/// ホーム画面をConsumerWidgetで作成
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
