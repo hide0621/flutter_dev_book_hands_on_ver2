@@ -6,6 +6,36 @@ hiragana converter
 
 [Flutter実践開発 - iPhone／Android両対応アプリ開発のテクニック - ](https://gihyo.jp/book/2024/978-4-297-13993-3)
 
+## 開発で使用したパッケージ
+
+`flutter pub add http`
+
+`flutte pub add json_annotation`
+
+`flutter pub add --dev json_serializable`
+
+`flutter pub add flutter_riverpod riverpod_annotation`
+
+`flutter pub add --dev riverpod_generator custom_lint riverpod_lint`
+
+`flutter pub add --dev build_runner`
+
+## .gitignoreに記載したのにも関わらず、反映されない問題とその解決策
+
+以下のコマンドを実行して、キャッシュを削除する（gitignoreが存在するディレクトリにて）
+
+`git rm -r --cached .`
+
+`git add .`
+
+`git commit -m ".gitignoreを反映させる"`
+
+`git push origin リモートブランチ名`
+
+参照：
+
+[.gitignoreに記載したのにも関わらず、反映されない問題とその解決策](https://atsu-developer.net/291/)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
