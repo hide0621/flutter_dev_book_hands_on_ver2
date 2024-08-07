@@ -20,6 +20,10 @@ hiragana converter
 
 `flutter pub add --dev build_runner`
 
+以下のコマンドでコード生成を行います。
+
+`flutter packages pub run build_runner build`
+
 ## .gitignoreに記載したのにも関わらず、反映されない問題とその解決策
 
 以下のコマンドを実行して、キャッシュを削除する（gitignoreが存在するディレクトリにて）
